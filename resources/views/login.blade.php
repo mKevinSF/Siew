@@ -17,7 +17,7 @@
         aria-controls="pills-login" aria-selected="true">Login</a>
     </li>
     <li class="nav-item" role="presentation">
-      <a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="#pills-register" role="tab"
+      <a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="/register" role="tab"
         aria-controls="pills-register" aria-selected="false">Register</a>
     </li>
   </ul>
@@ -77,11 +77,11 @@
         </div>
 
         <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+        <a href="/home" class="btn btn-primary btn-block mb-4">Sign In</a>
 
         <!-- Register buttons -->
         <div class="text-center">
-          <p>Not a member? <a href="#!">Register</a></p>
+          <p>Not a member? <a href="/register">Register</a></p>
         </div>
       </form>
     </div>
@@ -148,7 +148,7 @@
         </div>
 
         <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
+        <button type="submit" class="btn btn-primary btn-block mb-3" href="/home">Sign In</button>
       </form>
     </div>
   </div>

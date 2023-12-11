@@ -22,7 +22,15 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function () {
-    return view('home');
+    return view('newhome');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::get('/login', function () {
+    return view('login');
 });
 
 Route::get('/songDetails_test', function () {
