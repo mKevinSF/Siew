@@ -39,11 +39,6 @@
   <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
     <form>
 
-      <!-- Name input -->
-      <div class="form-outline mb-4">
-        <input type="email" id="RegisterName" class="form-control" />
-        <label class="form-label" for="loginName">Name</label>
-      </div>
       <!-- Username input -->
       <div class="form-outline mb-4">
         <input type="email" id="RegsiterUsername" class="form-control" />
@@ -65,8 +60,6 @@
         <input type="password" id="RegsiterPassword" class="form-control" />
         <label class="form-label" for="loginPassword">Repeat Password</label>
       </div>
-
-
 
       <!-- Submit button -->
       <a href="/login" class="btn btn-primary btn-block mb-4">Sign Up</a>
