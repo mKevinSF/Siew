@@ -5,23 +5,22 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Faker\Factory as Faker;
 
-class ReviewsSeeder extends Seeder
+class CreatorsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        DB::table('reviews')->insert([
+        $faker = Faker::create();
+        DB::table('creators')->insert([
             [
-                'users_siew_id' => '1',
-                'comments_id' => '1',
-                'musics_id' => '1',
-                'ratings_id' => '1',
+                'creator_name' => $faker->name(),
                 'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
                 'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
             ]
-            ]);
+        ]);
     }
 }

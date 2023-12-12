@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('reviews', function (Blueprint $table) {
+        Schema::create('users_siew', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('users_siew_id');
-            $table->foreignId('comments_id');
-            $table->foreignId('musics_id');
-            $table->foreignId('ratings_id');
+            $table->string('user_name', 200);
+            $table->string('email')->unique();
+            $table->string('password', 60);
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('reviews');
+        Schema::dropIfExists('users');
     }
 };

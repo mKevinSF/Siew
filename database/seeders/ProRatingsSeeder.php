@@ -6,22 +6,20 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class ReviewsSeeder extends Seeder
+class ProRatingsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        DB::table('reviews')->insert([
+        DB::table('proratings')->insert([
             [
-                'users_siew_id' => '1',
-                'comments_id' => '1',
                 'musics_id' => '1',
-                'ratings_id' => '1',
+                'pro_rating' => '5',
                 'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
                 'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
             ]
-            ]);
+        ]);
     }
 }
