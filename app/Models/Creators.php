@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Creators extends Model
 {
     use HasFactory;
+
+    public function musics()
+    {
+        return $this->hasMany(musics::class, 'foreign_key');
+    }
 }

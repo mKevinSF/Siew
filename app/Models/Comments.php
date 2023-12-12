@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Comments extends Model
 {
     use HasFactory;
+
+    public function users()
+    {
+        return $this->belongsTo(users::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasOne(reviews::class);
+    }
 }

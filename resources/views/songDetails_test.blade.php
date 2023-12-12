@@ -9,9 +9,12 @@
                         <!-- Post header-->
                         <header class="mb-4">
                             <!-- Post title-->
-                            <h1 class="fw-bolder mb-1">Cinta Ini Membunuhku</h1>
-                            <!-- Post meta content-->
+                            @foreach ($creators as $song)
+
+                            <h1 class="fw-bolder mb-1">{{$song->creator_name}}</h1>
+                            @endforeach
                             <div class="text-muted fst-italic mb-2">Posted on January 1, 2023 by Start Bootstrap</div>
+                            <!-- Post meta content-->
                             <!-- Post categories-->
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Indonesian Song</a>
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Pop</a>

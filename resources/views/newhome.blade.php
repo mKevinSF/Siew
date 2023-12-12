@@ -1,3 +1,5 @@
+@extends('format')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,40 +17,6 @@
     </head>
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
-            <!-- Header-->
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Siew</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#">Reviews</a>
-            </li>
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Chart
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">daily</a></li>
-                <li><a class="dropdown-item" href="#">Weekly</a></li>
-                <li><a class="dropdown-item" href="#">Monthly</a></li>
-                <li><a class="dropdown-item" href="#">Yearly</a></li>
-            </ul>
-            </li>
-        </ul>
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        </div>
-    </div>
-    </nav>
             <!-- Features section-->
             <section class="py-5" id="features">
             <div id="carouselExampleCaptions" class="carousel slide">
@@ -189,24 +157,10 @@
                 </div>
             </section>
         </main>
-        <!-- Footer-->
-        <footer class="bg-dark py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Your Website 2023</div></div>
-                    <div class="col-auto">
-                        <a class="link-light small" href="#!">Privacy</a>
-                        <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light small" href="#!">Terms</a>
-                        <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light small" href="#!">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="/assets/js/scripts.js"></script>
     </body>
-</html>
+    </html>
+@endsection

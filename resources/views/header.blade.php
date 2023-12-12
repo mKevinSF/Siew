@@ -41,7 +41,10 @@
             <li class="nav-item">
             <a class="nav-link" href="/songDetails_test">Reviews</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item">
+            <a class="nav-link" href="/chart">Chart</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Chart
             </a>
@@ -51,7 +54,7 @@
                 <li><a class="dropdown-item" href="#">Monthly</a></li>
                 <li><a class="dropdown-item" href="#">Yearly</a></li>
             </ul>
-            </li>
+            </li> -->
         </ul>
         <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
