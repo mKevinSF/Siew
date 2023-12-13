@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers;
+use App\Http\Controllers\AuthManager;
 use App\Http\Controllers\reviewController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('login');
-});
+})->name('home');
 
 Route::get('/home', function () {
     return view('newhome');
@@ -30,13 +31,12 @@ Route::get('/chart', function () {
     return view('chart');
 });
 
-Route::get('/register', function () {
-    return view('register');
-});
+Route::get('/register', [AuthManager::class, 'register'])->name('register');
+Route::post('/register', [AuthManager::class, 'registerpost'])->name('register.post');
+Route::get('/login', [AuthManager::class, 'login'])->name('login');
+Route::post('/login', [AuthManager::class, 'loginpost'])->name('login.post');
+Route::get('/logout',[AuthManager::class, 'logout'])->name('logout');
 
-Route::get('/login', function () {
-    return view('login');
-});
 
 Route::get('/songDetails_test', function () {
     return view('songDetails_test');

@@ -2,9 +2,10 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class MigrateUserData extends Migration
 {
     /**
      * Run the migrations.
@@ -18,6 +19,8 @@ return new class extends Migration
             $table->string('password', 60);
             $table->timestamps();
         });
+
+        // DB::statement('INSERT INTO users_siew (user_name, email, password, created_at, updated_at) SELECT name, email, password, created_at, updated_at FROM users');
     }
 
     /**
@@ -25,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('users_siew');
     }
-};
+}

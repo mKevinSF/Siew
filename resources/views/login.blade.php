@@ -24,39 +24,29 @@
   <!-- Pills navs -->
 
   <!-- Pills content -->
+<div class="container">
+  @if($errors->any())
+    <div>
+      @foreach($errors->all() as $error)
+        <div class="alert alert-danger">{{$error}}</div>
+      @endforeach
+    </div>
+  @endif
+</div>
   <div class="tab-content">
     <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-      <form>
-        <div class="text-center mb-3">
-          <p>Sign in with:</p>
-          <button type="button" class="btn btn-link btn-floating mx-1">
-            <i class="fab fa-facebook-f"></i>
-          </button>
-
-          <button type="button" class="btn btn-link btn-floating mx-1">
-            <i class="fab fa-google"></i>
-          </button>
-
-          <button type="button" class="btn btn-link btn-floating mx-1">
-            <i class="fab fa-twitter"></i>
-          </button>
-
-          <button type="button" class="btn btn-link btn-floating mx-1">
-            <i class="fab fa-github"></i>
-          </button>
-        </div>
-
-        <p class="text-center">or:</p>
-
+      <form action="{{route('login.post')}}" method="POST">
+        {{auth()->user()}}
+        @csrf
         <!-- Email input -->
         <div class="form-outline mb-4">
-          <input type="email" id="loginName" class="form-control" />
+          <input type="tezt" id="loginName" class="form-control" name="user_name"/>
           <label class="form-label" for="loginName">Username</label>
         </div>
 
         <!-- Password input -->
         <div class="form-outline mb-4">
-          <input type="password" id="loginPassword" class="form-control" />
+          <input type="password" id="loginPassword" class="form-control" name="password"/>
           <label class="form-label" for="loginPassword">Password</label>
         </div>
 
@@ -77,7 +67,7 @@
         </div>
 
         <!-- Submit button -->
-        <a href="/home" class="btn btn-primary btn-block mb-4">Sign In</a>
+        <button type="submit" class="btn btn-primary btn-block mb-4">Sign In</button>
 
         <!-- Register buttons -->
         <div class="text-center">

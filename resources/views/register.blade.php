@@ -35,106 +35,52 @@
 <!-- Pills navs -->
 
 <!-- Pills content -->
+<div class="container">
+  @if($errors->any())
+    <div>
+      @foreach($errors->all() as $error)
+        <div class="alert alert-danger">{{$error}}</div>
+      @endforeach
+    </div>
+  @endif
+</div>
 <div class="tab-content">
-  <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-    <form>
+  <div class="tab-pane fade show active" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+      <form action="{{ route('register.post') }}" method="POST">
+          @csrf <!-- Tambahkan CSRF Token -->
 
-      <!-- Username input -->
-      <div class="form-outline mb-4">
-        <input type="email" id="RegsiterUsername" class="form-control" />
-        <label class="form-label" for="loginName">Username</label>
-      </div>
-      <!-- Email input -->
-      <div class="form-outline mb-4">
-        <input type="email" id="RegsiterEmail" class="form-control" />
-        <label class="form-label" for="loginName">Email</label>
-      </div>
+          <!-- Username input -->
+          <div class="form-outline mb-4">
+              <input type="text" id="RegisterUsername" class="form-control" name="user_name"/>
+              <label class="form-label" for="RegisterUsername">Username</label>
+          </div>
 
-      <!-- Password input -->
-      <div class="form-outline mb-4">
-        <input type="password" id="RegsiterPassword" class="form-control" />
-        <label class="form-label" for="loginPassword">Password</label>
-      </div>
-      <!-- Repeat Password input -->
-      <div class="form-outline mb-4">
-        <input type="password" id="RegsiterPassword" class="form-control" />
-        <label class="form-label" for="loginPassword">Repeat Password</label>
-      </div>
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+              <input type="email" id="RegisterEmail" class="form-control" name="email"/>
+              <label class="form-label" for="RegisterEmail">Email</label>
+          </div>
 
-      <!-- Submit button -->
-      <a href="/login" class="btn btn-primary btn-block mb-4">Sign Up</a>
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+              <input type="password" id="RegisterPassword" class="form-control" name="password"/>
+              <label class="form-label" for="RegisterPassword">Password</label>
+          </div>
 
-      <!-- Register buttons -->
-      <div class="text-center">
-        <p>Already had an account? <a href="/login">Login</a></p>
-      </div>
-    </form>
-  </div>
-  <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
-    <form>
-      <div class="text-center mb-3">
-        <p>Sign up with:</p>
-        <button type="button" class="btn btn-link btn-floating mx-1">
-          <i class="fab fa-facebook-f"></i>
-        </button>
+          <!-- Repeat Password input -->
+          <div class="form-outline mb-4">
+              <input type="password" id="RegisterRepeatPassword" class="form-control" name="password_confirmation"/>
+              <label class="form-label" for="RegisterRepeatPassword">Repeat Password</label>
+          </div>
 
-        <button type="button" class="btn btn-link btn-floating mx-1">
-          <i class="fab fa-google"></i>
-        </button>
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-block mb-4">Sign Up</button>
 
-        <button type="button" class="btn btn-link btn-floating mx-1">
-          <i class="fab fa-twitter"></i>
-        </button>
-
-        <button type="button" class="btn btn-link btn-floating mx-1">
-          <i class="fab fa-github"></i>
-        </button>
-      </div>
-
-      <p class="text-center">or:</p>
-
-      <!-- Name input -->
-      <div class="form-outline mb-4">
-        <input type="text" id="registerName" class="form-control" />
-        <label class="form-label" for="registerName">Name</label>
-      </div>
-
-      <!-- Username input -->
-      <div class="form-outline mb-4">
-        <input type="text" id="registerUsername" class="form-control" />
-        <label class="form-label" for="registerUsername">Username</label>
-      </div>
-
-      <!-- Email input -->
-      <div class="form-outline mb-4">
-        <input type="email" id="registerEmail" class="form-control" />
-        <label class="form-label" for="registerEmail">Email</label>
-      </div>
-
-      <!-- Password input -->
-      <div class="form-outline mb-4">
-        <input type="password" id="registerPassword" class="form-control" />
-        <label class="form-label" for="registerPassword">Password</label>
-      </div>
-
-      <!-- Repeat Password input -->
-      <div class="form-outline mb-4">
-        <input type="password" id="registerRepeatPassword" class="form-control" />
-        <label class="form-label" for="registerRepeatPassword">Repeat password</label>
-      </div>
-
-      <!-- Checkbox -->
-      <div class="form-check d-flex justify-content-center mb-4">
-        <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
-          aria-describedby="registerCheckHelpText" />
-        <label class="form-check-label" for="registerCheck">
-          I have read and agree to the terms
-        </label>
-      </div>
-
-      <!-- Submit button -->
-      <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
-    </form>
+          <!-- Register buttons -->
+          <div class="text-center">
+              <p>Already have an account? <a href="/login">Login</a></p>
+          </div>
+      </form>
   </div>
 </div>
 <!-- Pills content -->
