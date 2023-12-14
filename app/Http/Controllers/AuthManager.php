@@ -15,27 +15,26 @@ class AuthManager extends Controller
     function login(){
         return view('login');
     }
-        function loginpost(Request $request){
-            $request->validate([
-                'user_name' => 'required',
-                'password' => 'required'
-            ], [
-                'user_name.required' => 'Nama pengguna wajib diisi',
-                'password.required' => 'Password wajib diisi'
-            ]);
-            
-            $user = DB::table('users_siew')->where('user_name', $request->user_name)->first();
+    function loginpost(Request $request){
+        $request->validate([
+            'user_name' => 'required',
+            'password' => 'required'
+        ], [
+            'user_name.required' => 'Nama pengguna wajib diisi',
+            'password.required' => 'Password wajib diisi'
+        ]);
         
-            if ($user && Hash::check($request->password, $user->password)) {
-                // Password cocok, buat sesi atau tindakan lain yang diperlukan
-                // Misalnya, jika ingin membuat sesi manual:
-                session(['user' => $user]); // Menyimpan pengguna dalam sesi
-        
-                return redirect()->intended(route('home'));
-            }
-        
-            return redirect(route('login'))->withErrors('Kredensial tidak valid');
+        $user = DB::table('users_siew')->where('user_name', $request->user_name)->first();
+    
+        if ($user && Hash::check($request->password, $user->password)) {
+            // Password cocok, menyimpan informasi pengguna dalam sesi
+            session(['user' => $user]);
+            return redirect()->intended(route('newhome'));
         }
+    
+        return redirect(route('login'))->withErrors('Kredensial tidak valid');
+    }
+    
 
     function register(){
         return view('register');

@@ -40,7 +40,7 @@
         @csrf
         <!-- Email input -->
         <div class="form-outline mb-4">
-          <input type="tezt" id="loginName" class="form-control" name="user_name"/>
+          <input type="text" id="loginName" class="form-control" name="user_name"/>
           <label class="form-label" for="loginName">Username</label>
         </div>
 

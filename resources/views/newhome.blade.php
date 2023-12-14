@@ -1,5 +1,16 @@
 @extends('format')
 @section('content')
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html> -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -25,6 +36,9 @@
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
+  <h1>{{session('user')->user_name}}</h1>
+
+
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="https://s3.amazonaws.com/mongabay/indonesia/600/sulawesi-bunaken_0726.jpg" class="d-block w-100" alt="...">

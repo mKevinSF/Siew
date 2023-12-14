@@ -44,17 +44,11 @@
             <li class="nav-item">
             <a class="nav-link" href="/chart">Chart</a>
             </li>
-            <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Chart
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">daily</a></li>
-                <li><a class="dropdown-item" href="#">Weekly</a></li>
-                <li><a class="dropdown-item" href="#">Monthly</a></li>
-                <li><a class="dropdown-item" href="#">Yearly</a></li>
-            </ul>
-            </li> -->
+        </ul>
+        <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('logout') }}">Logout</a>
+                </li>
         </ul>
         <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

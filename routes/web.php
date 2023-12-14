@@ -25,7 +25,7 @@ Route::get('/', function () {
 
 Route::get('/home', function () {
     return view('newhome');
-});
+})->name('newhome');
 
 Route::get('/chart', function () {
     return view('chart');

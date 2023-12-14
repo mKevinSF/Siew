@@ -12,9 +12,9 @@ class Users extends Model
     protected $fillable = [
         'user_name', 'email', 'password'
     ];
-    // protected $attributes = [
-    //     'user_name' => 'default_user_name'
-    // ];
+    protected $attributes = [
+        'user_name' => 'default_user_name'
+    ];
 
     public function comments()
     {
