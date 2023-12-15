@@ -17,10 +17,25 @@ class CreatorsSeeder extends Seeder
         $faker = Faker::create();
         DB::table('creators')->insert([
             [
-                'creator_name' => $faker->name(),
+                'creator_name' => "D'Masiv",
                 'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
                 'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
-            ]
+            ],
+            [
+                'creator_name' => "Andra and The Backbone",
+                'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
+                'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
+            ],
+            [
+                'creator_name' => "Virzha",
+                'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
+                'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
+            ],
+            [
+                'creator_name' => "Peterpan",
+                'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
+                'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
+            ],
         ]);
     }
 }

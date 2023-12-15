@@ -7,14 +7,15 @@ use App\Models\Musics;
 
 class reviewController extends Controller
 {
-    public function index() {
-        $musics = musics::all();
-        $creators = Musics::find(1)->creators()
-                    ->where('id', '1')
-                    ->first();
-        // $genres = Genres::all();
+    // public function index() {
+    //     $musics = musics::all();
 
-        return view('songDetails_test', ['musics' => $musics, 'creators' => $creators]);
+    //     return view('songDetails_test', ['musics' => $musics]);
+    // }
+
+    public function show(Musics $post) {
+
+        return view('songDetails_test', ['song' => $post]);
     }
 
     // public function detial(Movies $id){

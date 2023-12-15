@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+
 </body>
 </html> -->
 <!DOCTYPE html>
@@ -36,12 +36,12 @@
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <h1>{{session('user')->user_name}}</h1>
+  <h1>Welcome, {{session('user')->user_name}}</h1>
 
 
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://s3.amazonaws.com/mongabay/indonesia/600/sulawesi-bunaken_0726.jpg" class="d-block w-100" alt="...">
+      <img src="https://imgsrv2.voi.id/s0zlEsdOqRUA20p63IuPIc7P89xVndRJAY6v736IEZA/auto/1280/853/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy8xODg4Ny8yMDIwMTEwNTExMzItbWFpbi5jcm9wcGVkXzE2MDQ1NTA3MjkuanBlZw.jpg" style="width:350px;height:900px;" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>

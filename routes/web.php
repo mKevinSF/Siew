@@ -2,6 +2,7 @@
 use App\Http\Controllers;
 use App\Http\Controllers\AuthManager;
 use App\Http\Controllers\reviewController;
+use App\Http\Controllers\musicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,4 +43,14 @@ Route::get('/songDetails_test', function () {
     return view('songDetails_test');
 });
 
-Route::get('/songDetails_test', [reviewController::class, 'index']);
+// Route::get('/songDetails_test', [reviewController::class, 'index']);
+
+Route::get('/songDetails_test/{post}', [reviewController::class, 'show']);
+
+Route::get('/songList', function () {
+    return view('songList');
+});
+
+Route::get('/songList', [musicController::class, 'list']);
+
+

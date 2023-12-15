@@ -9,11 +9,8 @@
                         <!-- Post header-->
                         <header class="mb-4">
                             <!-- Post title-->
-                            @foreach ($creators as $song)
-
-                            <h1 class="fw-bolder mb-1">{{$song->creator_name}}</h1>
-                            @endforeach
-                            <div class="text-muted fst-italic mb-2">Posted on January 1, 2023 by Start Bootstrap</div>
+                            <h1 class="fw-bolder mb-1">{{$song->music_name}}</h1>
+                            <div class="text-muted fst-italic mb-2">Posted on {{$song->created_at}} by Pikamek</div>
                             <!-- Post meta content-->
                             <!-- Post categories-->
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Indonesian Song</a>
@@ -21,16 +18,12 @@
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Rock</a>
                         </header>
                         <!-- Preview image figure-->
-                        <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure>
+                        <figure class="mb-4"><img class="img-fluid rounded" src="{{$song->imageURL}}" style="width:900px;height:400px;" alt="..." /></figure>
                         <!-- Post content-->
                         <section class="mb-5">
-                            <p class="fs-5 mb-4">"Lagu Cinta Ini Membunuhku" adalah salah satu lagu populer dari grup musik Indonesia, D'Masiv. Lagu ini dirilis pada tahun 2009 sebagai salah satu singel dari album mereka yang berjudul "Menuju Nirwana." Lagu ini menjadi sangat populer di Indonesia dan banyak digemari oleh penggemar musik.</p>
-                            <p class="fs-5 mb-4">Latar belakang lagu ini adalah tentang perasaan cinta yang begitu mendalam sehingga terasa seperti menyiksa. Lirik lagu ini menggambarkan perasaan seseorang yang begitu terpukul dan hancur oleh cinta yang tidak berbalas atau hubungan yang berakhir. Mereka merasa bahwa cinta itu "membunuh" mereka, bukan secara fisik tetapi emosional. Lagu ini mencerminkan perasaan kehilangan, kesedihan, dan keputusasaan yang sering muncul dalam hubungan cinta yang rumit.</p>
-                            <p class="fs-5 mb-4">Lagu ini menjadi sangat populer karena liriknya yang kuat dan musik yang menyentuh hati. D'Masiv berhasil mengungkapkan emosi kompleks yang terkait dengan cinta yang tidak berjalan dengan baik melalui lagu ini, dan itulah mengapa lagu ini masih dicintai oleh banyak orang hingga saat ini.</p>
-                            <h2 class="fw-bolder mb-4 mt-5">Detail d'Masiv</h2>
-                            <p class="fs-5 mb-4">d'Masiv adalah band rock Indonesia yang dibentuk di Jakarta pada tahun 2003.</p>
-                            <p class="fs-5 mb-4">d'Masiv telah merilis 5 album studio dan meraih berbagai penghargaan.</p>
-                            <p class="fs-5 mb-4">Band ini dikenal dengan lagu-lagunya yang bertema cinta dan kehidupan.</p>
+                            <p class="fs-5 mb-4">{{$song->description}}</p>
+                            <h2 class="fw-bolder mb-4 mt-5">Detail {{$song->creators->creator_name}}</h2>
+                            <p class="fs-5 mb-4">{{$song->detail}}</p>
                         </section>
                     </article>
                     <!-- Comments section-->

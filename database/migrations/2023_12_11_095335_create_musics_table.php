@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('musics', function (Blueprint $table) {
             $table->id();
             $table->string('music_name', 200);
+            $table->string('imageURL', 5000);
+            $table->longText('description');
+            $table->longText('detail');
+            $table->date('publication_date')->format('d.m.Y');
             $table->foreignId('creators_id');
             $table->timestamps();
         });

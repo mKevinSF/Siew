@@ -23,18 +23,18 @@ class AuthManager extends Controller
             'user_name.required' => 'Nama pengguna wajib diisi',
             'password.required' => 'Password wajib diisi'
         ]);
-        
+
         $user = DB::table('users_siew')->where('user_name', $request->user_name)->first();
-    
+
         if ($user && Hash::check($request->password, $user->password)) {
             // Password cocok, menyimpan informasi pengguna dalam sesi
             session(['user' => $user]);
             return redirect()->intended(route('newhome'));
         }
-    
+
         return redirect(route('login'))->withErrors('Kredensial tidak valid');
     }
-    
+
 
     function register(){
         return view('register');

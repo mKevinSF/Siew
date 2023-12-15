@@ -11,6 +11,6 @@ class Creators extends Model
 
     public function musics()
     {
-        return $this->hasMany(musics::class, 'foreign_key');
+        return $this->hasMany(musics::class);
     }
 }
