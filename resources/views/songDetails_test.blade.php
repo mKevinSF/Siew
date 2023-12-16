@@ -76,14 +76,14 @@
                     <div class="card mb-4">
                         <div class="card-header">User Reviews</div>
                         <div class="card-body">
-                            
+                            <h3>{{ $rating->rating }}.0/5.0</h3>
                         </div>
                     </div>
                     <!-- Profesional Reviews-->
                     <!-- <div class="card mb-4"> -->
                         <div class="container">
                             <br/>
-                            <form method="POST" action="{{ route('calculateRating', ['song_id' => $song->id]) }}">
+                            <form method="POST" action="{{ route('music.rate', ['post' => $song->id]) }}">
                                 @csrf
                                 <label for="input-3" class="control-label">Give a rating for this song:</label>
                                 <input type="number" name="user_rating" id="user-rating" min="1" max="5" step="0.1">

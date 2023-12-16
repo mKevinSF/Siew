@@ -14,6 +14,10 @@ class Ratings extends Model
         return $this->hasOne(reviews::class);
     }
 
+    protected $fillable = [
+        'musics_id', 'rating' // Sesuaikan dengan atribut yang ada di tabel Ratings
+    ];
+
     public function users()
     {
         return $this->belongsTo(users::class);
