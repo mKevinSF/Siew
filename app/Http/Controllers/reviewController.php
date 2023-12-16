@@ -18,6 +18,8 @@ class reviewController extends Controller
         return view('songDetails_test', ['song' => $post]);
     }
 
+    
+
     // public function detial(Movies $id){
 
     //     return view('detail', ['movies'=>$id]);

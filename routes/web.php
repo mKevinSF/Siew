@@ -53,4 +53,4 @@ Route::get('/songList', function () {
 
 Route::get('/songList', [musicController::class, 'list']);
 
-
+Route::post('/calculateRating/{song_id}', 'RatingController@calculateRating')->name('calculateRating');

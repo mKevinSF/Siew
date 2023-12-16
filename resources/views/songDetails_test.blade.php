@@ -74,33 +74,33 @@
                     <!-- User Reviews-->
                     <div class="card mb-4">
                         <div class="card-header">User Reviews</div>
-                        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                        <div class="card-body">
+                        <div class="card-body">
+                            @if($rating)
+                                <h1>{{ $rating->value }}/5.0</h1>
+                            @else
+                                <p>No ratings yet.</p>
+                            @endif
+                        </div>
+                        </div>
                     </div>
                     <!-- Profesional Reviews-->
                     <!-- <div class="card mb-4"> -->
                         <div class="container">
                             <br/>
-
-                            <label for="input-3" class="control-label">Give a rating for this song:</label>
-
-                            <input id="input-3" name="input-3" class="rating rating-loading" data-min="0" data-max="5" data-step="0.1" value="5">
-                        <!-- </div> -->
-                        <!-- <div class="card-header">Give your rating</div>
-                        <div class="card-body">
-                            <div class="star-rating">
-                                <span class="fa fa-star-o" data-rating="1"></span>
-                                <span class="fa fa-star-o" data-rating="2"></span>
-                                <span class="fa fa-star-o" data-rating="3"></span>
-                                <span class="fa fa-star-o" data-rating="4"></span>
-                                <span class="fa fa-star-o" data-rating="5"></span>
-                                <input type="hidden" name="whatever1" class="rating-value" value="2.5">
-                            </div>
-                        </div> -->
+                            <form method="POST" action="{{ route('calculateRating', ['song_id' => $song->id]) }}">
+                                @csrf
+                                <label for="input-3" class="control-label">Give a rating for this song:</label>
+                                <input type="number" name="user_rating" id="user-rating" min="1" max="5" step="0.1">
+                                <br>
+                                <button type="submit">Sumit your rating</button>
+                            </form>
+                            <!-- <input id="input-3" name="input-3" class="rating rating-loading" data-min="0" data-max="5" data-step="0.1" value="5"> -->
                     </div>
                     <!-- User Reviews-->
                     <div class="card mb-4">
                         <div class="card-header">Profesional Reviews</div>
-                        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                        <div class="card-body">{{$song->Profesional_review}}</div>
                     </div>
                 </div>
             </div>
