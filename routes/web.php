@@ -3,18 +3,8 @@ use App\Http\Controllers;
 use App\Http\Controllers\AuthManager;
 use App\Http\Controllers\reviewController;
 use App\Http\Controllers\musicController;
+use App\Http\Controllers\RatingController;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -28,9 +18,9 @@ Route::get('/home', function () {
     return view('newhome');
 })->name('newhome');
 
-Route::get('/chart', function () {
-    return view('chart');
-});
+// Route::get('/chart', function () {
+//     return view('chart');
+// });
 
 Route::get('/register', [AuthManager::class, 'register'])->name('register');
 Route::post('/register', [AuthManager::class, 'registerpost'])->name('register.post');
@@ -43,8 +33,6 @@ Route::get('/songDetails_test', function () {
     return view('songDetails_test');
 });
 
-// Route::get('/songDetails_test', [reviewController::class, 'index']);
-
 Route::get('/songDetails_test/{post}', [reviewController::class, 'show']);
 
 Route::get('/songList', function () {
@@ -53,4 +41,5 @@ Route::get('/songList', function () {
 
 Route::get('/songList', [musicController::class, 'list']);
 
-Route::post('/calculateRating/{song_id}', 'RatingController@calculateRating')->name('calculateRating');
+Route::get('/chart',[RatingController::class,'list']);
+

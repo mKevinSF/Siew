@@ -24,8 +24,32 @@ class RatingsSeeder extends Seeder
                 'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
             ],[
                 'musics_id' => '2',
-                'rating' => '5',
-                'users_id' => '',
+                'rating' => '4',
+                'users_id' => '2',
+                'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
+                'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
+            ],[
+                'musics_id' => '3',
+                'rating' => '3',
+                'users_id' => '1',
+                'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
+                'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
+            ],[
+                'musics_id' => '4',
+                'rating' => '3',
+                'users_id' => '2',
+                'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
+                'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
+            ],[
+                'musics_id' => '5',
+                'rating' => '2',
+                'users_id' => '1',
+                'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
+                'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
+            ],[
+                'musics_id' => '6',
+                'rating' => '1',
+                'users_id' => '2',
                 'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
                 'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
             ]
