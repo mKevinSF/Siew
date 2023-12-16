@@ -74,15 +74,10 @@
                     <!-- User Reviews-->
                     <div class="card mb-4">
                         <div class="card-header">User Reviews</div>
-                        <div class="card-body">
-                        <div class="card-body">
-                            @if($rating)
-                                <h1>{{ $rating->value }}/5.0</h1>
-                            @else
-                                <p>No ratings yet.</p>
-                            @endif
-                        </div>
-                        </div>
+                            <div class="card-body">
+                                    <h1>/5.0</h1>
+                                    <h1>No ratings yet.</h1>
+                            </div>
                     </div>
                     <!-- Profesional Reviews-->
                     <!-- <div class="card mb-4"> -->

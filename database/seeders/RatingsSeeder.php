@@ -22,6 +22,12 @@ class RatingsSeeder extends Seeder
                 'users_id' => '1',
                 'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
                 'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
+            ],[
+                'musics_id' => '2',
+                'rating' => '5',
+                'users_id' => '',
+                'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
+                'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
             ]
             ]);
     }
