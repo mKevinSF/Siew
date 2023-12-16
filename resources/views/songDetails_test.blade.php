@@ -26,8 +26,9 @@
                             <p class="fs-5 mb-4">{{$song->detail}}</p>
                         </section>
                     </article>
+
                     <!-- Comments section-->
-                    <section class="mb-5">
+                    <section class="card my-5">
                         <div class="card bg-light">
                             <div class="card-body">
                                 <!-- Comment form-->
@@ -69,6 +70,7 @@
                         </div>
                     </section>
                 </div>
+
                 <!-- Side widgets-->
                 <div class="col-lg-4">
                     <!-- User Reviews-->
