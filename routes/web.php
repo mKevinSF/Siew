@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthManager;
 use App\Http\Controllers\reviewController;
 use App\Http\Controllers\musicController;
 use App\Http\Controllers\RatingController;
+use App\Http\Controllers\commentController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -40,3 +41,6 @@ Route::get('/chart',[RatingController::class,'list']);
 
 // nyoba2
 Route::post('/music/{post}/rate', [ReviewController::class, 'storeRating'])->name('music.rate');
+
+// Comment
+Route::post('/songDetails_test/{post}/comment', [commentController::class, 'store'])->name('storeComment');
