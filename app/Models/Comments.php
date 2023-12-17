@@ -9,6 +9,11 @@ class Comments extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'comment',
+        'musics_id',
+    ];
+
     public function users()
     {
         return $this->belongsTo(users::class);
@@ -17,5 +22,10 @@ class Comments extends Model
     public function reviews()
     {
         return $this->hasOne(reviews::class);
+    }
+
+    public function music()
+    {
+        return $this->belongsTo(Musics::class, 'musics_id');
     }
 }

@@ -17,9 +17,8 @@ class CommentsSeeder extends Seeder
         $faker = Faker::create();
         DB::table('comments')->insert([
             [
-                'ratings_id' => '1',
                 'comment' => $faker->text(150),
-                'users_id' => '1',
+                'musics_id' => '1',
                 'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
                 'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
             ]

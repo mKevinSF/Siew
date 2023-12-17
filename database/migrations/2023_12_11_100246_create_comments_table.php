@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('ratings_id');
+            $table->foreignId('musics_id');
             $table->text('comment');
-            $table->foreignId('users_id');
             $table->timestamps();
         });
     }

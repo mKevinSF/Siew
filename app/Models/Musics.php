@@ -18,4 +18,9 @@ class Musics extends Model
     {
         return $this->hasOne(reviews::class);
     }
+
+    public function comments()
+    {
+        return $this->hasMany(Comments::class);
+    }
 }

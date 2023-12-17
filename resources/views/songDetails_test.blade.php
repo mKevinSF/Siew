@@ -35,18 +35,29 @@
                     </article>
 
                     <!-- Comments section-->
-                    <section class="card my-5">
-                        <div class="card bg-light">
+                    <section class="card mb-5">
+                        <h4 class="card-header mb-2 fw-bolder">Add Comment</h4>
                             <div class="card-body">
                                 <!-- Comment form-->
                                 <form method="post" action="{{ route('storeComment', ['post' => $song->id])}}" >
                                     @csrf
-                                    <textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!" name="comment"></textarea>
+                                    <button type="submit" class="btn btn-dark mt-2">Submit</button>
                                 </form>
                             </div>
-                        </div>
                     </section>
+
+                    <div>
+                        <h2>Comments</h2>
+                        @forelse($song->comments as $comment)
+                            <div>
+                                <p>{{ $comment->comment }}</p>
+                            </div>
+                        @empty
+                            <p>No Comments yet.</p>
+                        @endforelse
+                    </div>
+                    
                 </div>
 
                 <!-- Side widgets-->
