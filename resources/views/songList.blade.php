@@ -23,7 +23,7 @@
                 @foreach ($musics as $list)
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src={{$list->imageURL}} alt="..." style="width:350px;height:200px;"/>
+                            <img class="card-img-top" src={{$list->imageURL}} alt="..." style="width:100%;height:40%;"/>
                             <div class="card-body p-4">
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">Top Hits</div>
                                 <a class="text-decoration-none link-dark stretched-link" href="songDetails_test/{{$list->id}}"><h5 class="card-title mb-3">{{$list->creators->creator_name}}</h5></a>

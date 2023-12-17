@@ -1,16 +1,5 @@
 @extends('format')
 @section('content')
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -23,8 +12,6 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="/assets/css/styles.css" rel="stylesheet" />
     </head>
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
@@ -43,22 +30,22 @@
     <div class="carousel-item active">
       <img src="https://imgsrv2.voi.id/s0zlEsdOqRUA20p63IuPIc7P89xVndRJAY6v736IEZA/auto/1280/853/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy8xODg4Ny8yMDIwMTEwNTExMzItbWFpbi5jcm9wcGVkXzE2MDQ1NTA3MjkuanBlZw.jpg" style="width:350px;height:900px;" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <!-- <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p> -->
       </div>
     </div>
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+      <img src="https://pophariini.com/wp-content/uploads/2018/06/Sheila-On-7.jpg" style="width:350px;height:900px;" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <!-- <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p> -->
       </div>
     </div>
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+      <img src="https://asset.kompas.com/crops/06bEqP7rEo6F-yoUtEVW7GCwVtY=/80x0:1017x625/780x390/data/photo/2021/01/15/6001913fbad47.jpg" style="width:350px;height:900px;" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <!-- <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p> -->
       </div>
     </div>
   </div>
@@ -78,13 +65,11 @@
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-10 col-xl-7">
                             <div class="text-center">
-                                <div class="fs-4 mb-4 fst-italic">"Working with Start Bootstrap templates has saved me tons of development time when building new projects! Starting with a Bootstrap template just makes things easier!"</div>
+                                <div class="fs-4 mb-4 fst-italic">"Musik memberi kita jalan untuk bercerita, membuat kita merasa tak sendirian di dunia ini"</div>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                    <img class="rounded-circle me-3" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/John_Denver_1974.jpg" alt="..." style="width:40px;height:40px;"/>
                                     <div class="fw-bold">
-                                        Tom Ato
-                                        <span class="fw-bold text-primary mx-1">/</span>
-                                        CEO, Pomodoro
+                                        John Denver
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +92,7 @@
                     @foreach ($home as $list)
                     <div class="col-lg-4 mb-5">
                         <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src={{$list->imageURL}} alt="..." style="width:350px;height:200px;"/>
+                            <img class="card-img-top" src={{$list->imageURL}} alt="..." style="width:100%;height:40%;"/>
                             <div class="card-body p-4">
                                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">Top Hits</div>
                                 <a class="text-decoration-none link-dark stretched-link" href="songDetails_test/{{$list->id}}"><h5 class="card-title mb-3">{{$list->creators->creator_name}}</h5></a>
