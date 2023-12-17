@@ -24,6 +24,7 @@ class MusicsSeeder extends Seeder
                 'Profesional_review'=> '‘Cinta Ini Membunuhku’ adalah sebuah mahakarya emosional yang memukau. Dengan lirik yang menghantui dan melodi yang mengalir begitu alami, lagu ini merangkul perasaan cinta yang begitu dalam hingga terasa menyakitkan. Vocal yang penuh kejujuran dari penyanyi memperkuat keseluruhan pengalaman mendengarkan, membuat pendengar terbawa dalam gelombang emosi yang mendalam. Aransemen musik yang sederhana namun kuat, menciptakan ruang bagi setiap kata untuk menyentuh hati. ‘Cinta Ini Membunuhku’ bukan hanya lagu, tapi pengalaman yang memikat dan menggugah, menempatkan perasaan paling intim pada puncaknya dengan keindahan yang tak terlupakan',
                 'publication_date' => date('2010-10-10'),
                 'creators_id' => '1',
+                'youtubeURL' => 'https://www.youtube.com/watch?v=Ub9bJVVFgXg',
                 'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
                 'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
             ],
@@ -35,6 +36,7 @@ class MusicsSeeder extends Seeder
                 'Profesional_review' =>'Musik Sempurna adalah karya yang menggugah jiwa dengan lirik yang mendalam dan melodi yang memikat. Komposisi yang kuat menggambarkan perasaan yang kompleks, memikat pendengar dari awal hingga akhir. Vocal yang penuh emosi menghantarkan pesan dengan kejelasan yang luar biasa, sementara instrumen musiknya memberikan dimensi tambahan pada pengalaman mendengar. Aransemen yang cerdas dan produksi yang berkualitas menjadikan setiap nada terasa pas dan memberikan nuansa yang mengharukan. Sempurna bukan hanya lagu, tapi juga perjalanan emosional yang tak terlupakan bagi pendengarnya, menawarkan keindahan yang tiada tanding.',
                 'publication_date' => date('2007-11-11'),
                 'creators_id' => '2',
+                'youtubeURL' => 'https://www.youtube.com/watch?v=Ra9KSo5tLOI',
                 'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
                 'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
             ],
@@ -46,6 +48,7 @@ class MusicsSeeder extends Seeder
                 'Profesional_review' => 'Aku Lelakimu adalah sebuah lagu yang menakjubkan dengan lirik yang kuat dan melodi yang merenung. Aransemen musiknya menonjolkan emosi yang mendalam, menciptakan ikatan yang kuat dengan pendengar. Vokal yang penuh perasaan memperkuat pesan tentang cinta dan kehilangan. Dari segi produksi, lagu ini memiliki keseimbangan yang sempurna antara instrumen, suara, dan nada yang mendalam, menciptakan pengalaman mendengar yang memikat. Kualitasnya yang luar biasa membuatnya layak mendapatkan pengakuan dalam industri musik. "Aku Lelakimu" tidak hanya sebuah lagu, tapi sebuah pengalaman emosional yang menggugah.',
                 'publication_date' => date('2015-02-27'),
                 'creators_id' => '3',
+                'youtubeURL' => 'https://www.youtube.com/watch?v=jNG4L1eHjFE',
                 'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
                 'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
             ],
@@ -57,6 +60,7 @@ class MusicsSeeder extends Seeder
                 'Profesional_review'=>'Jangan Menyerah adalah sebuah masterpiece yang menawan dari segi musik dan emosi. Dengan melodi yang menghanyutkan dan lirik yang memotivasi, lagu ini menghadirkan kekuatan yang menggetarkan jiwa pendengarnya. Dibawakan dengan penuh rasa oleh penyanyi yang berbakat, setiap nada dan kata terasa mengalir dengan harmoni yang menakjubkan. Aransemen yang cerdas memberikan dimensi baru pada pesan yang mendalam, menginspirasi pendengar untuk tetap tegar dalam menghadapi tantangan. "Jangan Menyerah" bukan sekadar lagu, tapi pesan kuat yang menyentuh hati dan mampu mengangkat semangat siapa pun yang mendengarnya.',
                 'publication_date' => date('2009-12-10'),
                 'creators_id' => '1',
+                'youtubeURL' => 'https://www.youtube.com/watch?v=xCuyl9Ll4Ls',
                 'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
                 'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
             ],
@@ -68,6 +72,7 @@ class MusicsSeeder extends Seeder
                 'Profesional_review'=>'Rindu 1/2 Mati merupakan sebuah karya yang memukau dengan lirik yang menghanyutkan dan melodi yang memikat. Aransemen musiknya menggabungkan elemen-elemen tradisional dengan sentuhan modern yang segar. Penyampaian emosi dalam lagu ini sungguh menggetarkan, mengajak pendengar masuk ke dalam perjalanan perasaan yang mendalam. Vocal yang mengalun penuh kehangatan memperkuat pesan yang ingin disampaikan, membuatnya menjadi lagu yang sulit dilupakan. Dengan kekuatan batin yang terpancar dari setiap nada, "Rindu 1/2 Mati" tidak hanya sekadar lagu, tapi pengalaman mendalam yang membuat terhanyut dalam aliran musiknya yang menawan.',
                 'publication_date' => date('2009-12-10'),
                 'creators_id' => '1',
+                'youtubeURL' => 'https://www.youtube.com/watch?v=2xdC2MfOVuE',
                 'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
                 'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
             ],
@@ -80,6 +85,7 @@ class MusicsSeeder extends Seeder
                 'Profesional_review'=>'Mungkin Nanti adalah sebuah masterpiece dalam industri musik Indonesia. Karya yang dibawakan oleh band legendaris, Peterpan, mengekspresikan keindahan melodi yang menyentuh hati pendengarnya. Lirik yang dalam dan puitis menggambarkan perasaan cinta dan harapan, menciptakan koneksi emosional yang mendalam. Aransemen musik yang harmonis, didukung oleh vokal yang memikat, memberikan dimensi baru pada lagu ini. Kehadirannya telah menjadi bagian tak terpisahkan dari budaya musik Indonesia, meraih tempat di hati pendengar dari berbagai generasi. Mungkin Nanti bukan hanya sebuah lagu, tapi kisah yang tetap menggetarkan jiwa setiap kali terdengar.',
                 'publication_date' => date('2012-07-18'),
                 'creators_id' => '4',
+                'youtubeURL' => 'https://www.youtube.com/watch?v=I4URpPDrP1Y',
                 'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
                 'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
             ]

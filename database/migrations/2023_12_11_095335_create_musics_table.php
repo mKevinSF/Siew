@@ -20,6 +20,7 @@ return new class extends Migration
             $table->longText('Profesional_review');
             $table->date('publication_date')->format('d.m.Y');
             $table->foreignId('creators_id');
+            $table->string('youtubeURL');
             $table->timestamps();
         });
     }

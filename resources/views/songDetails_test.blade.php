@@ -18,7 +18,14 @@
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Rock</a>
                         </header>
                         <!-- Preview image figure-->
-                        <figure class="mb-4"><img class="img-fluid rounded" src="{{$song->imageURL}}" style="width:900px;height:400px;" alt="..." /></figure>
+                        <?php
+                            $videoURL = $song->youtubeURL;
+                            $convertedURL = str_replace("watch?v=","embed/", $videoURL);
+                        ?>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="<?php echo $convertedURL; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <br>
                         <!-- Post content-->
                         <section class="mb-5">
                             <p class="fs-5 mb-4">{{$song->description}}</p>
@@ -45,7 +52,7 @@
                 <!-- Side widgets-->
                 <div class="col-lg-4">
                     <!-- User Reviews-->
-                    
+
                     <div class="card mb-4">
                         <div class="card-header">User Reviews</div>
                         <div class="card-body">
