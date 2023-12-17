@@ -14,7 +14,7 @@ class musicController extends Controller
     }
 
     public function list2() {
-        $home = musics::orderBy('created_at', 'desc')->take(3)->get();
+        $home = musics::orderBy('created_at', 'asc')->take(3)->get();
     
         return view('newhome', ['home' => $home]);
     }
