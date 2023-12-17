@@ -25,7 +25,6 @@
   </div>
   <h1>Welcome, {{session('user')->user_name}}</h1>
 
-
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="https://imgsrv2.voi.id/s0zlEsdOqRUA20p63IuPIc7P89xVndRJAY6v736IEZA/auto/1280/853/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy8xODg4Ny8yMDIwMTEwNTExMzItbWFpbi5jcm9wcGVkXzE2MDQ1NTA3MjkuanBlZw.jpg" style="width:350px;height:900px;" class="d-block w-100" alt="...">
