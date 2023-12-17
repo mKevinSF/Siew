@@ -12,4 +12,11 @@ class musicController extends Controller
 
         return view('songList', ['musics' => $musics]);
     }
+
+    public function list2() {
+        $home = musics::orderBy('created_at', 'desc')->take(3)->get();
+    
+        return view('newhome', ['home' => $home]);
+    }
+    
 }

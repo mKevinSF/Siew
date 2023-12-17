@@ -39,8 +39,11 @@ Route::get('/songList', [musicController::class, 'list']);
 
 Route::get('/chart',[RatingController::class,'list']);
 
-// nyoba2
+// rating
 Route::post('/music/{post}/rate', [ReviewController::class, 'storeRating'])->name('music.rate');
 
 // Comment
 Route::post('/songDetails_test/{post}/comment', [commentController::class, 'store'])->name('storeComment');
+
+// home
+Route::get('/newhome', [musicController::class, 'list2']);
