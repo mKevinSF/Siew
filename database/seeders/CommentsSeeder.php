@@ -19,6 +19,7 @@ class CommentsSeeder extends Seeder
             [
                 'comment' => $faker->text(150),
                 'musics_id' => '1',
+                'users_id' => '1',
                 'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
                 'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
             ]

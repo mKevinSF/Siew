@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('musics_id');
             $table->text('comment');
+            $table->foreignId('users_id');
             $table->timestamps();
         });
     }

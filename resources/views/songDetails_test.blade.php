@@ -39,7 +39,7 @@
                         <h4 class="card-header mb-2 fw-bolder">Add Comment</h4>
                             <div class="card-body">
                                 <!-- Comment form-->
-                                <form method="post" action="{{ route('storeComment', ['post' => $song->id])}}" >
+                                <form method="post" action="{{ route('storeComment', ['user' => session('user')->id, 'post' => $song->id])}}" >
                                     @csrf
                                     <textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!" name="comment"></textarea>
                                     <button type="submit" class="btn btn-dark mt-2">Submit</button>
@@ -49,15 +49,35 @@
 
                     <div>
                         <h2>Comments</h2>
-                        @forelse($song->comments as $comment)
-                            <div>
-                                <p>{{ $comment->comment }}</p>
-                            </div>
-                        @empty
-                            <p>No Comments yet.</p>
-                        @endforelse
+                            <section style="background-color: #e7effd;">
+                                <div class="container my-5 py-5 text-dark">
+                                <div class="row d-flex">
+                                    <div class="col-md-11 col-lg-50 col-xl-7">
+                                        @forelse($song->comments as $comment)
+                                        <div class="d-flex flex-start mb-4">
+                                            <img class="rounded-circle shadow-1-strong me-3"
+                                            src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" alt="avatar" width="65"
+                                            height="65" />
+                                            <div class="card" style="width: 60%;">
+                                            <div class="card-body p-4">
+                                                <div class="">
+                                                    <span class="badge text-bg-primary">
+                                                        {{$comment->users->user_name}}
+                                                    </span>
+                                                <p class="small">Posted at: {{$comment->created_at}}</p>
+                                                    <p>{{ $comment->comment}}</p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        @empty
+                                        <p>No Comments yet.</p>
+                                        @endforelse
+                                    </div>
+                                </div>
+                                </div>
+                            </section>
                     </div>
-                    
                 </div>
 
                 <!-- Side widgets-->

@@ -43,7 +43,7 @@ Route::get('/chart',[RatingController::class,'list']);
 Route::post('/music/{post}/rate', [ReviewController::class, 'storeRating'])->name('music.rate');
 
 // Comment
-Route::post('/songDetails_test/{post}/comment', [commentController::class, 'store'])->name('storeComment');
+Route::post('/songDetails_test/{user}/{post}/comment', [commentController::class, 'store'])->name('storeComment');
 
 // home
 Route::get('/home', [musicController::class, 'list2'])->name('newhome');;

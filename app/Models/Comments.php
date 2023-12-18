@@ -12,6 +12,7 @@ class Comments extends Model
     protected $fillable = [
         'comment',
         'musics_id',
+        'users_id'
     ];
 
     public function users()
