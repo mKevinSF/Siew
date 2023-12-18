@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center mt-4">Top Music</h1>
+        <h1 class="text-center mt-4">Current Top 3 Musics</h1>
         <!-- Music List -->
         <ul id="musicList" class="list-group music-list">
             <!-- Dynamic content will be displayed here -->
@@ -26,8 +26,7 @@
                 @endphp
                 @if($music)
                     <li class="list-group-item">
-                        <h4>{{ $index + 1 }}. {{ $music->music_name }} by {{$music->creators->creator_name}}</h4>
-                        <p>                  dengan rating {{ $topThreeRatings[$index] }}.0 / 5.0</p>
+                        <h4><img src="{{ $music->imageURL }}" alt="..." style="width:10%;height:10%;margin-right:2%;">{{ $index + 1 }}. {{ $music->music_name }} by {{$music->creators->creator_name}} | dengan rating {{ $topThreeRatings[$index] }}.0 / 5.0</h4>
                     </li>
                 @endif
             @endforeach
