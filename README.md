@@ -4,7 +4,5 @@ Siew merupakan sebuah website untuk mereview musik yang dimana para pengguna web
 
 ## Kelompok 3 - Music Review (Siew)
 2540133663	Muhammad Kevin Safaat
-
 2540117514	Matthew Alexander Christanto
-
 2540132225	Vincent Antonius Pandora
